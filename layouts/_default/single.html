@@ -1,7 +1,38 @@
 {{ define "title" }}{{ cond (eq .Site.Params.titlecase true) (.Title | title | markdownify) (.Title | markdownify) }}{{ end }}
 
 {{ define "main" }}
-<article class="center bg-white br-3 pv1 ph4 nested-copy-line-height lh-copy f4 nested-links mw-100 measure-wide">
+<article class="center bg-white br-3 pv1 ph4 nested-copy-line-height lh-copy f5 nested-links mw-100 measure-xwide">
+
+  <div id="hdr" class="tc-l pv3-ns pv4-l pv2 ph3 ph4-ns">
+    <h1 class="f2 fw6 mb0 mt0 lh-title">
+      {{ cond (eq .Site.Params.titlecase true) (.Title | title | markdownify) (.Title | markdownify) }}
+    </h1>
+    <h2 class="mb2-l fw6 f5 f3-l measure-wide-l center lh-copy mt2 mb2">
+      <!-- You can put a subtitle here in _index.md parameters, or it'll get
+      filled in with date and categories if it's a post -->
+      {{ if .IsPage }}
+        {{ if eq .Section "talks" }}
+          Presented
+          <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+            {{- .Date.Format "January 2, 2006" -}}
+          </time>
+          at <a class="category hover-gray" href="{{ .Params.site }}">{{ .Params.event }}</a>
+        {{ else }}
+          Published
+          <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+            {{- .Date.Format "Jan 2, 2006" -}}
+          </time>
+          <span class="display-print">by {{ .Params.author | default .Site.Params.author }}</span>
+          {{ range $idx, $cat := .Params.categories }}{{ if gt $idx 0 }}, {{ end }}{{ if eq $idx 0 }} in {{ end }}<a href="{{ "categories/" | absURL }}/{{ . | urlize }}"
+          class="category hover-gray">{{ . | title }}</a>{{ end }}
+          <span class="display-print">at {{ .Permalink }}</span>
+        {{ end }}
+      {{ else }}
+        {{ with .Params.subtitle }}{{ . | markdownify }}{{ end }}
+      {{ end }}
+    </h2>
+  </div>
+
 	{{ .Content }}
 </article>
 {{ end }}

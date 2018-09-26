@@ -38,7 +38,12 @@ $( function() {
    $("body.feature-figcaption:not(.feature-nofigcaption) article img").each(function(i, e) {
       var $this = $(this);
       // Don't put captions on images that have URL fragment pseudo-classes.
-      if ( $this.attr('src').match(/#/) ) return;
+      var $frags = "";
+      if ( $this.attr('src').match(/#/) ) {
+         var $spl = $this.attr('src').split(/#/, 2);
+         $frags = $spl[1];
+         $this.attr('src', $spl[0]);
+      }
       var $txt = false;
       if ( $this.next().is("em") ) {
          $txt = $this.next().html();
@@ -49,8 +54,8 @@ $( function() {
               :                         false;
       }
       if ( $txt ) {
-         var $fig = $this.wrap('<figure id="fig-' + (i+1) + '">')
-            .after('<figcaption class="f5 lh-copy i ph3">' + $txt + '</figcaption>')
+         var $fig = $this.wrap('<figure id="fig-' + (i+1) + '" class="' + $frags + '">')
+            .after('<figcaption class="bg-black-10 f5 lh-copy i ph3">' + $txt + '</figcaption>')
             .parent();
       }
    });

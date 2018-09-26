@@ -14,7 +14,17 @@ body article {
     font-family: 'Quattrocento Sans', -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
   }
 }
-@media only screen and (min-width: 50em) {
+@media only screen and (min-width: 60em) {
+  body.is-page-true.feature-depth:not(.feature-nodepth):not(.feature-nohdr) article {
+    margin-top: -8em;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 0.5em 0.125em;
+  }
+  body.feature-depth:not(.feature-nodepth):not(.feature-nohdr) main > div {
+    margin-top: -8em;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 0.5em 0.125em;
+  }
+}
+@media only screen and (min-width: 50em) and (max-width: 60em) {
   body.is-page-true.feature-depth:not(.feature-nodepth):not(.feature-nohdr) article {
     margin-top: -2em;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 0.5em 0.125em;
@@ -240,6 +250,9 @@ img[src~="3dbook"] {
   max-width: 160px;
 }
 @media screen {
+  .measure-xwide {
+    max-width: 50em;
+  }
   .book {
     display: inline-block;
     box-shadow: 5px 5px 20px #333;
@@ -345,6 +358,9 @@ img[src~="3dbook"] {
     font-size: 1rem !important;
   }
   .measure-wide {
+    max-width: 45em !important;
+  }
+  .measure-xwide {
     max-width: 45em !important;
   }
   main {

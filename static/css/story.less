@@ -20,7 +20,17 @@ body {
 			}
 		}
 	}
-	@media only screen and (min-width: 50em) {
+	@media only screen and (min-width: 60em) {
+		&.is-page-true.feature-depth:not(.feature-nodepth):not(.feature-nohdr) article {
+			margin-top: -8em;
+			box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 0.5em 0.125em;
+		}
+		&.feature-depth:not(.feature-nodepth):not(.feature-nohdr) main > div {
+			margin-top: -8em;
+			box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 0.5em 0.125em;
+		}
+	}
+	@media only screen and (min-width: 50em) and (max-width: 60em) {
 		&.is-page-true.feature-depth:not(.feature-nodepth):not(.feature-nohdr) article {
 			margin-top: -2em;
 			box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 0.5em 0.125em;
@@ -282,6 +292,10 @@ img[src~="3dbook"] {
 	// more classes:
 	// <p class="books"><a class="book"><img></a></p>
 
+	.measure-xwide {
+		max-width: 50em;
+	}
+
 	// Fallback book cover styles
 	.book {
 		display: inline-block;
@@ -392,6 +406,9 @@ img[src~="3dbook"] {
 	.measure-wide { // increase line width to compensate for the decrease in font size
 		max-width: 45em !important;
 	}
+	.measure-xwide { // increase line width to compensate for the decrease in font size
+		max-width: 45em !important;
+	}
 	main { // don't waste paper on extra blank pages
 		padding-bottom: 0 !important;
 	}
@@ -402,5 +419,6 @@ img[src~="3dbook"] {
 		border-bottom-style: none !important;
 	}
 }
+
 
 .hljs{display:block;color:#333333;overflow-x:auto}.hljs-comment,.hljs-meta{color:#969896}.hljs-string,.hljs-variable,.hljs-template-variable,.hljs-strong,.hljs-emphasis,.hljs-quote{color:#df5000}.hljs-keyword,.hljs-selector-tag,.hljs-type{color:#a71d5d}.hljs-literal,.hljs-symbol,.hljs-bullet,.hljs-attribute{color:#0086b3}.hljs-section,.hljs-name{color:#63a35c}.hljs-tag{color:#333333}.hljs-title,.hljs-attr,.hljs-selector-id,.hljs-selector-class,.hljs-selector-attr,.hljs-selector-pseudo{color:#795da3}.hljs-addition{color:#55a532;background-color:#eaffea}.hljs-deletion{color:#bd2c00;background-color:#ffecec}.hljs-link{text-decoration:underline}

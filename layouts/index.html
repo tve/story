@@ -1,6 +1,9 @@
 {{ define "main" }}
-	<div class="pa3 pa4-ns w-100 w-70-ns center">
+	<div class="bg-white br3 pa3 pa4-ns w-100 w-70-ns center">
 		<section class="w-100 mw8">
+    <h1 class="tc-l ph3 ph0-l f2 fw6 mb3 mt0 lh-title">
+      {{ cond (eq .Site.Params.titlecase true) (.Title | title | markdownify) (.Title | markdownify) }}
+    </h1>
 		{{ $pages := where .Paginator.Pages ".Params.skip" "ne" "true" }}
 		{{ range where (where $pages ".Date.Unix" "<" now.Unix) "Section" "ne" "slides" }}
 			{{ partial "li.html" . }}
