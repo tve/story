@@ -6,8 +6,7 @@
 		<title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
 		<link rel="alternate" type="application/rss+xml" title="RSS" href="{{ "index.xml" | absURL }}">
 		<link rel="canonical" href="{{ .Permalink }}">
-		<!-- the Story logo is a square with rounded corners interlocked with a section symbol in Bodoni 72 Book font -->
-		<link rel="shortcut icon" type="image/png" href="{{ "apple-touch-icon-precomposed.png" | absURL }}">
+		<link rel="shortcut icon" type="image/png" href="{{ "/img/icon.png" | absURL }}">
 		{{ with .Description }}<meta name="description" content="{{.}}">{{ end }}
 		{{ with .Keywords }}<meta name="keywords" content="{{.}}">{{ end }}
 		{{ .Hugo.Generator }}
