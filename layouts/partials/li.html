@@ -11,10 +11,15 @@
 				</div>
 				{{ end }}
 				<div class="w-100 w6-ns pl3-ns">
-					<h1 class="f3 fw1 mt0 lh-title mb2"><a href="{{ .Permalink }}" class="color-inherit dim link">
+					<h1 class="f3 fw1 mv0 lh-title mb2"><a href="{{ .Permalink }}" class="color-inherit dim link">
 					{{- if eq .Section "talks" }}{{ .Params.event }}: {{ end -}}
 					{{- cond (eq .Site.Params.titlecase true) (.Title | title) (.Title | markdownify) -}}
 					</a></h1>
+					<div class="f6 mt0 mb2">
+						<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+							{{- .Date.Format "January 2, 2006" -}}
+						</time>
+					</div>
 					<div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
 						{{ if eq .Section "slides" }}
 							{{ .Description | markdownify }}

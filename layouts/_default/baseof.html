@@ -138,6 +138,7 @@
 			</p>
 			<p class="w-50 near-white">
 				&copy; {{ now.Format "2006" }} {{ with .Site.Params.author }}{{ . }}{{ end }}
+				{{ with .GitInfo }}{{ .GitInfo.AbbreviatedHash }}{{ end }}
 			</p>
 		</footer>
 		{{ end }}
