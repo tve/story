@@ -1,0 +1,16 @@
+<div>
+{{ $project := (printf "%s" $.Page.Params.project) }}
+{{ $pages := (index $.Site.Taxonomies.project $project).Pages.ByDate}}
+{{ $this := $.Page.RelPermalink }}
+<h3 class="mt1 mb2 pl1">Project: {{ (index $pages 0).Title }}</h3>
+<ul class="mt2">
+{{ range $num, $page := $pages }}
+    {{ $title := (cond (eq $num 0) "Project introduction" $page.Title) }}
+    {{ if eq $page.RelPermalink $this }}
+        <li>{{ $title | markdownify }}
+    {{ else }}
+        <li><a href="{{ $page.RelPermalink }}">{{ $title | markdownify }}</a>
+    {{ end }}
+{{ end }}
+</ul>
+</div>

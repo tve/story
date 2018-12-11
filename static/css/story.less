@@ -4,6 +4,8 @@
 @border: #dfe2e5;
 @muted-text: #6a737d;
 
+.shaded-bg { background: #f6f8fa; }
+
 // Typography designed for clarity and elegance on a large, modern (hi-res)
 // display.  But when reading on an cellphone, a sans-serif font family is much
 // nicer, so apply serif fonts to the article only at larger sizes or in print.
@@ -75,6 +77,21 @@ article img {
 	max-width: 100%;
 }
 
+ul:not(.pagination) {
+        padding-inline-start: 25px;
+        //list-style-type: square;
+        list-style: none;
+        margin-left: 0;
+        padding-left: 1em;
+}
+ul:not(.pagination) > li:before {
+        display: inline-block;
+        content: "-";
+        width: 1em;
+        margin-left: -1em;
+        position: absolute;
+}
+
 hr {
 	height: 0px;
 	border-style: none none solid none;
@@ -140,6 +157,7 @@ figure {
 	padding: 0px;
 	img {
 		display: block;
+                width: 100%;
 	}
 }
 
@@ -171,7 +189,7 @@ body:not(.feature-tablefig) table {
 	border-spacing: 0;
 	border-collapse: collapse;
 	display: block;
-	width: 100%;
+	//width: 100%;
 	overflow: auto;
 	font-size: 85%;
 	font-family: @font-sans;

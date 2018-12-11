@@ -301,10 +301,11 @@ each(@box-lengths, {
 	.b@{key}, img[src~="b@{key}"]       { bottom: @value; }
 	.l@{key}, img[src~="l@{key}"]       { left: @value; }
 	// https://www.sitepoint.com/css-center-position-absolute-div/
-	.w@{key}.center, img[src~="w@{key}"][src~=center] {
-		left: 50%;
-		margin-left: @value/-2;
-	}
+	// TvE: senters on let margin!?
+        // .w@{key}.center, img[src~="w@{key}"][src~=center] {
+	//	left: 50%;
+	//	margin-left: @value/-2;
+	//}
 });
 
 // Element display styles, positioning, floating, etc

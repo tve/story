@@ -9626,11 +9626,6 @@ img[src~="b-0"] {
 img[src~="l-0"] {
   left: 0;
 }
-.w-0.center,
-img[src~="w-0"][src~=center] {
-  left: 50%;
-  margin-left: 0;
-}
 .w-1,
 img[src~="w-1"] {
   width: 1rem;
@@ -9670,11 +9665,6 @@ img[src~="b-1"] {
 .l-1,
 img[src~="l-1"] {
   left: 1rem;
-}
-.w-1.center,
-img[src~="w-1"][src~=center] {
-  left: 50%;
-  margin-left: -0.5rem;
 }
 .w-2,
 img[src~="w-2"] {
@@ -9716,11 +9706,6 @@ img[src~="b-2"] {
 img[src~="l-2"] {
   left: 2rem;
 }
-.w-2.center,
-img[src~="w-2"][src~=center] {
-  left: 50%;
-  margin-left: -1rem;
-}
 .w-3,
 img[src~="w-3"] {
   width: 4rem;
@@ -9760,11 +9745,6 @@ img[src~="b-3"] {
 .l-3,
 img[src~="l-3"] {
   left: 4rem;
-}
-.w-3.center,
-img[src~="w-3"][src~=center] {
-  left: 50%;
-  margin-left: -2rem;
 }
 .w-4,
 img[src~="w-4"] {
@@ -9806,11 +9786,6 @@ img[src~="b-4"] {
 img[src~="l-4"] {
   left: 8rem;
 }
-.w-4.center,
-img[src~="w-4"][src~=center] {
-  left: 50%;
-  margin-left: -4rem;
-}
 .w-5,
 img[src~="w-5"] {
   width: 16rem;
@@ -9850,11 +9825,6 @@ img[src~="b-5"] {
 .l-5,
 img[src~="l-5"] {
   left: 16rem;
-}
-.w-5.center,
-img[src~="w-5"][src~=center] {
-  left: 50%;
-  margin-left: -8rem;
 }
 .w-6,
 img[src~="w-6"] {
@@ -9896,11 +9866,6 @@ img[src~="b-6"] {
 img[src~="l-6"] {
   left: 32rem;
 }
-.w-6.center,
-img[src~="w-6"][src~=center] {
-  left: 50%;
-  margin-left: -16rem;
-}
 .w-7,
 img[src~="w-7"] {
   width: 48rem;
@@ -9940,11 +9905,6 @@ img[src~="b-7"] {
 .l-7,
 img[src~="l-7"] {
   left: 48rem;
-}
-.w-7.center,
-img[src~="w-7"][src~=center] {
-  left: 50%;
-  margin-left: -24rem;
 }
 .w-8,
 img[src~="w-8"] {
@@ -9986,11 +9946,6 @@ img[src~="b-8"] {
 img[src~="l-8"] {
   left: 64rem;
 }
-.w-8.center,
-img[src~="w-8"][src~=center] {
-  left: 50%;
-  margin-left: -32rem;
-}
 .w-9,
 img[src~="w-9"] {
   width: 96rem;
@@ -10030,11 +9985,6 @@ img[src~="b-9"] {
 .l-9,
 img[src~="l-9"] {
   left: 96rem;
-}
-.w-9.center,
-img[src~="w-9"][src~=center] {
-  left: 50%;
-  margin-left: -48rem;
 }
 .w-10pct,
 img[src~="w-10pct"] {
@@ -10076,11 +10026,6 @@ img[src~="b-10pct"] {
 img[src~="l-10pct"] {
   left: 10%;
 }
-.w-10pct.center,
-img[src~="w-10pct"][src~=center] {
-  left: 50%;
-  margin-left: -5%;
-}
 .w-20pct,
 img[src~="w-20pct"] {
   width: 20%;
@@ -10120,11 +10065,6 @@ img[src~="b-20pct"] {
 .l-20pct,
 img[src~="l-20pct"] {
   left: 20%;
-}
-.w-20pct.center,
-img[src~="w-20pct"][src~=center] {
-  left: 50%;
-  margin-left: -10%;
 }
 .w-30pct,
 img[src~="w-30pct"] {
@@ -10166,11 +10106,6 @@ img[src~="b-30pct"] {
 img[src~="l-30pct"] {
   left: 30%;
 }
-.w-30pct.center,
-img[src~="w-30pct"][src~=center] {
-  left: 50%;
-  margin-left: -15%;
-}
 .w-33pct,
 img[src~="w-33pct"] {
   width: 33%;
@@ -10210,11 +10145,6 @@ img[src~="b-33pct"] {
 .l-33pct,
 img[src~="l-33pct"] {
   left: 33%;
-}
-.w-33pct.center,
-img[src~="w-33pct"][src~=center] {
-  left: 50%;
-  margin-left: -16.5%;
 }
 .w-34pct,
 img[src~="w-34pct"] {
@@ -10256,11 +10186,6 @@ img[src~="b-34pct"] {
 img[src~="l-34pct"] {
   left: 34%;
 }
-.w-34pct.center,
-img[src~="w-34pct"][src~=center] {
-  left: 50%;
-  margin-left: -17%;
-}
 .w-40pct,
 img[src~="w-40pct"] {
   width: 40%;
@@ -10300,11 +10225,6 @@ img[src~="b-40pct"] {
 .l-40pct,
 img[src~="l-40pct"] {
   left: 40%;
-}
-.w-40pct.center,
-img[src~="w-40pct"][src~=center] {
-  left: 50%;
-  margin-left: -20%;
 }
 .w-50pct,
 img[src~="w-50pct"] {
@@ -10346,11 +10266,6 @@ img[src~="b-50pct"] {
 img[src~="l-50pct"] {
   left: 50%;
 }
-.w-50pct.center,
-img[src~="w-50pct"][src~=center] {
-  left: 50%;
-  margin-left: -25%;
-}
 .w-60pct,
 img[src~="w-60pct"] {
   width: 60%;
@@ -10390,11 +10305,6 @@ img[src~="b-60pct"] {
 .l-60pct,
 img[src~="l-60pct"] {
   left: 60%;
-}
-.w-60pct.center,
-img[src~="w-60pct"][src~=center] {
-  left: 50%;
-  margin-left: -30%;
 }
 .w-70pct,
 img[src~="w-70pct"] {
@@ -10436,11 +10346,6 @@ img[src~="b-70pct"] {
 img[src~="l-70pct"] {
   left: 70%;
 }
-.w-70pct.center,
-img[src~="w-70pct"][src~=center] {
-  left: 50%;
-  margin-left: -35%;
-}
 .w-75pct,
 img[src~="w-75pct"] {
   width: 75%;
@@ -10480,11 +10385,6 @@ img[src~="b-75pct"] {
 .l-75pct,
 img[src~="l-75pct"] {
   left: 75%;
-}
-.w-75pct.center,
-img[src~="w-75pct"][src~=center] {
-  left: 50%;
-  margin-left: -37.5%;
 }
 .w-80pct,
 img[src~="w-80pct"] {
@@ -10526,11 +10426,6 @@ img[src~="b-80pct"] {
 img[src~="l-80pct"] {
   left: 80%;
 }
-.w-80pct.center,
-img[src~="w-80pct"][src~=center] {
-  left: 50%;
-  margin-left: -40%;
-}
 .w-90pct,
 img[src~="w-90pct"] {
   width: 90%;
@@ -10570,11 +10465,6 @@ img[src~="b-90pct"] {
 .l-90pct,
 img[src~="l-90pct"] {
   left: 90%;
-}
-.w-90pct.center,
-img[src~="w-90pct"][src~=center] {
-  left: 50%;
-  margin-left: -45%;
 }
 .w-100pct,
 img[src~="w-100pct"] {
@@ -10616,11 +10506,6 @@ img[src~="b-100pct"] {
 img[src~="l-100pct"] {
   left: 100%;
 }
-.w-100pct.center,
-img[src~="w-100pct"][src~=center] {
-  left: 50%;
-  margin-left: -50%;
-}
 .w-1-12th,
 img[src~="w-1-12th"] {
   width: 8.33333333%;
@@ -10660,11 +10545,6 @@ img[src~="b-1-12th"] {
 .l-1-12th,
 img[src~="l-1-12th"] {
   left: 8.33333333%;
-}
-.w-1-12th.center,
-img[src~="w-1-12th"][src~=center] {
-  left: 50%;
-  margin-left: -4.16666667%;
 }
 .w-2-12th,
 img[src~="w-2-12th"] {
@@ -10706,11 +10586,6 @@ img[src~="b-2-12th"] {
 img[src~="l-2-12th"] {
   left: 16.66666667%;
 }
-.w-2-12th.center,
-img[src~="w-2-12th"][src~=center] {
-  left: 50%;
-  margin-left: -8.33333333%;
-}
 .w-3-12th,
 img[src~="w-3-12th"] {
   width: 25%;
@@ -10750,11 +10625,6 @@ img[src~="b-3-12th"] {
 .l-3-12th,
 img[src~="l-3-12th"] {
   left: 25%;
-}
-.w-3-12th.center,
-img[src~="w-3-12th"][src~=center] {
-  left: 50%;
-  margin-left: -12.5%;
 }
 .w-4-12th,
 img[src~="w-4-12th"] {
@@ -10796,11 +10666,6 @@ img[src~="b-4-12th"] {
 img[src~="l-4-12th"] {
   left: 33.33333333%;
 }
-.w-4-12th.center,
-img[src~="w-4-12th"][src~=center] {
-  left: 50%;
-  margin-left: -16.66666667%;
-}
 .w-5-12th,
 img[src~="w-5-12th"] {
   width: 41.66666667%;
@@ -10840,11 +10705,6 @@ img[src~="b-5-12th"] {
 .l-5-12th,
 img[src~="l-5-12th"] {
   left: 41.66666667%;
-}
-.w-5-12th.center,
-img[src~="w-5-12th"][src~=center] {
-  left: 50%;
-  margin-left: -20.83333333%;
 }
 .w-6-12th,
 img[src~="w-6-12th"] {
@@ -10886,11 +10746,6 @@ img[src~="b-6-12th"] {
 img[src~="l-6-12th"] {
   left: 50%;
 }
-.w-6-12th.center,
-img[src~="w-6-12th"][src~=center] {
-  left: 50%;
-  margin-left: -25%;
-}
 .w-7-12th,
 img[src~="w-7-12th"] {
   width: 58.33333333%;
@@ -10930,11 +10785,6 @@ img[src~="b-7-12th"] {
 .l-7-12th,
 img[src~="l-7-12th"] {
   left: 58.33333333%;
-}
-.w-7-12th.center,
-img[src~="w-7-12th"][src~=center] {
-  left: 50%;
-  margin-left: -29.16666667%;
 }
 .w-8-12th,
 img[src~="w-8-12th"] {
@@ -10976,11 +10826,6 @@ img[src~="b-8-12th"] {
 img[src~="l-8-12th"] {
   left: 66.66666667%;
 }
-.w-8-12th.center,
-img[src~="w-8-12th"][src~=center] {
-  left: 50%;
-  margin-left: -33.33333333%;
-}
 .w-9-12th,
 img[src~="w-9-12th"] {
   width: 75%;
@@ -11020,11 +10865,6 @@ img[src~="b-9-12th"] {
 .l-9-12th,
 img[src~="l-9-12th"] {
   left: 75%;
-}
-.w-9-12th.center,
-img[src~="w-9-12th"][src~=center] {
-  left: 50%;
-  margin-left: -37.5%;
 }
 .w-10-12th,
 img[src~="w-10-12th"] {
@@ -11066,11 +10906,6 @@ img[src~="b-10-12th"] {
 img[src~="l-10-12th"] {
   left: 83.33333333%;
 }
-.w-10-12th.center,
-img[src~="w-10-12th"][src~=center] {
-  left: 50%;
-  margin-left: -41.66666667%;
-}
 .w-11-12th,
 img[src~="w-11-12th"] {
   width: 91.66666667%;
@@ -11110,11 +10945,6 @@ img[src~="b-11-12th"] {
 .l-11-12th,
 img[src~="l-11-12th"] {
   left: 91.66666667%;
-}
-.w-11-12th.center,
-img[src~="w-11-12th"][src~=center] {
-  left: 50%;
-  margin-left: -45.83333333%;
 }
 .w-third,
 img[src~="w-third"] {
@@ -11156,11 +10986,6 @@ img[src~="b-third"] {
 img[src~="l-third"] {
   left: 33.33333333%;
 }
-.w-third.center,
-img[src~="w-third"][src~=center] {
-  left: 50%;
-  margin-left: -16.66666667%;
-}
 .w-two-thirds,
 img[src~="w-two-thirds"] {
   width: 66.66666667%;
@@ -11200,11 +11025,6 @@ img[src~="b-two-thirds"] {
 .l-two-thirds,
 img[src~="l-two-thirds"] {
   left: 66.66666667%;
-}
-.w-two-thirds.center,
-img[src~="w-two-thirds"][src~=center] {
-  left: 50%;
-  margin-left: -33.33333333%;
 }
 .dn,
 img[src~=dn] {

@@ -48,7 +48,7 @@ $( function() {
       if ( $this.next().is("em") ) {
          $txt = $this.next().html();
          $this.next().remove();
-      } else {
+      } else if ( !$frags.match(/nocaption/) ) {
          $txt = $this.attr('title')   ? $this.attr('title')
               : $this.attr('alt')     ? $this.attr('alt')
               :                         false;
@@ -57,6 +57,8 @@ $( function() {
          var $fig = $this.wrap('<figure id="fig-' + (i+1) + '" class="' + $frags + '">')
             .after('<figcaption class="bg-black-10 f5 lh-copy i ph3">' + $txt + '</figcaption>')
             .parent();
+      } else if ( $frags ) {
+         var $fig = $this.wrap('<figure id="fig-' + (i+1) + '" class="' + $frags + '">').parent();
       }
    });
    if ( $("body.feature-figlink").length ) {
@@ -100,4 +102,17 @@ $( function() {
          }
       });
    }
+});
+
+/* Add floating text paragraphs (divs)
+ * If a paragraph is followed by a <floatpara /> tag then it is floated to the right
+ */
+$( function() {
+   $("body article floatpara").each(function(i, e) {
+      var $this = $(this);
+      var $para = $this.prev();
+      if ($para.length == 0) $para = $this.parent().prev();
+      console.log("triggered", $this, $para);
+      $para.wrap('<div class="fr ml2 mt1 mb1 pa1 shaded-bg w-50pct">').parent();
+   });
 });

@@ -1,0 +1,55 @@
+{{ define "title" }}{{ .Section | title }} &bullet; {{ .Site.Title }}{{ end }}
+{{ define "main" }}
+<div class="bg-white br-3 pa3 pa4-ns w-100 w-70-ns center">
+  <section class="w-100 mw8">
+    <h1 class="tc-l ph3 ph0-l f2 fw6 mb3 mt0 lh-title">
+      {{ cond (eq .Site.Params.titlecase true) (.Title | title | markdownify) (.Title | markdownify) }}
+    </h1>
+    {{ range where .Paginator.Pages ".Params.skip" "ne" "true" }}
+      <div class="relative w-100">
+        <article class="bb b--black-10">
+          <div class="db pv3 ph0-l no-underline dark-gray w-100 w6-ns pl3-ns">
+              <h1 class="f3 fw1 mt0 lh-title mb2">
+                <a href="{{ .Permalink }}" class="color-inherit dim link">
+                  {{- cond (eq .Site.Params.titlecase true) (.Title | title) (.Title | markdownify) -}}
+                </a>
+              </h1>
+              <div class="w-100 w6-ns flex-wrap">
+                {{ range (first 5 .Pages) -}}
+                <a href="{{ .Permalink }}" class="dib w-50pct color-inherit dim link">
+                  <div class="flex flex-row items-center">
+                    {{ $imgurl := (absURL (default "img/default-header-img.tn-500x500.jpg" (default .Params.image .Params.thumbnail))) }}
+                    <div class="mv1 mr2 h2 w2 br3 cover"
+                        style="background-image: url('{{ $imgurl}}'); background-position: center;">
+                      <span class="w-100 h-100"></span>
+                    </div>
+                    <p class="mv0 color-inherit dim link lh-solid sans-serif">
+                        {{- .Title -}}
+                    </p>
+                  </div>
+                </a>
+                {{- end -}}
+                {{- if (gt (len .Pages) 5) -}}
+                  <a href="{{ .Permalink }}" class="dib w-50pct color-inherit dim link">
+                    <div class="flex flex-row items-center">
+                      <div class="mv1 h2 w0"><span class="h-100"></span></div>
+                      <p class="mv0 h-100">more...</p>
+                    </div>
+                  </a>
+                {{- end }}
+              </div>
+          </div>
+        </article>
+      </div>
+    {{ end }}
+  </section>
+</div>
+{{ end }}
+
+{{ define "pagination" }}
+<footer class="w-100 sans-serif" role="contentinfo">
+  <nav class="w-third-l pb3 f6 center db" role="navigation">
+    {{- template "_internal/pagination.html" . -}}
+  </nav>
+</footer>
+{{ end }}
