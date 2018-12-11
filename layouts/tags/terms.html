@@ -9,7 +9,7 @@
       <div class="relative w-100">
         <article class="bb b--black-10">
           <div class="db pv3 ph0-l no-underline dark-gray w-100 w6-ns pl3-ns">
-              <h1 class="f3 fw1 mt0 lh-title mb2">
+              <h1 class="f2 fw1 mt0 lh-title mb2">
                 <a href="{{ .Permalink }}" class="color-inherit dim link">
                   {{- cond (eq .Site.Params.titlecase true) (.Title | title) (.Title | markdownify) -}}
                 </a>

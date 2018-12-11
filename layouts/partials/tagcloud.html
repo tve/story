@@ -3,8 +3,8 @@
 {{ range $key, $value := . }}
   {{ $count := (div .Count $div) }}
   {{ $size := (cond (gt $count 5) 2 (sub 7 $count)) }}
-  <a href="/categories/{{ $key | urlize }}"
-      class="color-inherit dim link f{{ $size }} mh1 br-pill ph1 bg-palegoldenrod">
+  <a href="/tags/{{ $key | urlize }}"
+      class="color-inherit dim link f{{ $size }} mh1 br-pill ph1 bg-lavender">
     {{- $key }}
     <span style="font-size: 80%;">{{ .Count }}</span>
   </a>

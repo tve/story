@@ -24,19 +24,21 @@
           </time>
           <span class="display-print">
             by {{ .Params.author | default .Site.Params.author }}</span>
-            {{ range $idx, $cat := .Params.categories }}
-              {{ if gt $idx 0 }}, {{ end }}
-              {{ if eq $idx 0 }} in {{ end }}
-              <a href="{{ "categories/" | absURL }}/{{ . | urlize }}"
-                  class="category hover-gray">{{ . | title }}</a>
-            {{ end }}
-            <span class="display-print">at {{ .Permalink }}</span>
-            {{ if (and (ne .Section "projects") $.Page.Params.project) }}
-              {{ $pages := (index $.Site.Taxonomies.project $.Page.Params.project).Pages.ByDate }}
-              {{ $projpage := (index $pages 0) }}
-              as part of
-              <a href="{{ $projpage.Permalink }}" class="category hover-gray">{{ $projpage.Title | title }}</a>
-            {{ end }}
+          <br>
+          <span class="display-print">At {{ .Permalink }}<br></span>
+          {{ if (and (ne .Section "projects") $.Page.Params.project) }}
+            {{ $pages := (index $.Site.Taxonomies.project $.Page.Params.project).Pages.ByDate }}
+            {{ $projpage := (index $pages 0) }}
+            In
+            <a href="{{ $projpage.Permalink }}" class="category hover-gray">{{ $projpage.Title | title }}</a>
+            <br>
+          {{ end }}
+          {{ range $idx, $cat := .Params.tags }}
+            {{ if gt $idx 0 }}, {{ end }}
+            {{ if eq $idx 0 }} Tagged {{ end }}
+            <a href="{{ "tags" | absURL }}/{{ . | urlize }}"
+                class="category hover-gray">{{ . | title }}</a>
+          {{ end }}
         {{ end }}
       {{ else }}
         {{ with .Params.subtitle }}{{ . | markdownify }}{{ end }}
@@ -50,21 +52,23 @@
 
   {{ .Content }}
 
-  <hr class="cb pt2">
-  {{ if (ne .Section "projects") }}
-    {{ partial "projindex" . }}
-  {{ end }}
-  {{ partial "comments" . }}
+  <span class="hide-print">
+    <hr class="cb pt2">
+    {{ if (ne .Section "projects") }}
+      {{ partial "projindex" . }}
+    {{ end }}
+    {{ partial "comments" . }}
+  </span>
 </article>
 {{ end }}
 
 {{ define "social" }}
-		<meta name="og:title" content="{{ cond (eq .Site.Params.titlecase true) (.Title | title | markdownify) (.Title | markdownify) }}" />
-		<meta name="og:type" content="article" />
-		<meta name="og:image" content="{{ default "img/default-header-img.jpg" .Params.image | absURL }}" />
-		<meta name="og:description" content="{{ .Description }}" />
-		<meta name="og:url" content="{{ .Permalink }}" />
-		<meta name="og:site_name" content="{{ cond (eq .Site.Params.titlecase true) (.Title | title | markdownify) (.Title | markdownify) }}" />
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:site" content="@{{ .Site.Params.twitter }}" />
+  <meta name="og:title" content="{{ cond (eq .Site.Params.titlecase true) (.Title | title | markdownify) (.Title | markdownify) }}" />
+  <meta name="og:type" content="article" />
+  <meta name="og:image" content="{{ default "img/default-header-img.jpg" .Params.image | absURL }}" />
+  <meta name="og:description" content="{{ .Description }}" />
+  <meta name="og:url" content="{{ .Permalink }}" />
+  <meta name="og:site_name" content="{{ cond (eq .Site.Params.titlecase true) (.Title | title | markdownify) (.Title | markdownify) }}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@{{ .Site.Params.twitter }}" />
 {{ end }}
